@@ -263,3 +263,34 @@
 
 71 12 42 62 23 63 
 
+
+
+
+
+### Code 
+
+order=load('/Users/mengweiwei/Desktop/5分类/stimulus_marker/0206-1.mat');
+label=order.order'; 
+
+- 这是在获取什么？
+
+- 这个代码要跑起来，需要什么样的数据？
+
+  - k 为什么是20？
+
+-     rowNames=Namess{k,1};
+      row = str2double(rowNames(13));
+      column = str2double(rowNames(12));
+      
+      ？？
+
+                        train1=ins(class1(1:15),:);test1=ins(class1(16:20),:);
+                        train2=ins(class2(1:15),:);test2=ins(class2(16:20),:);
+                        train3=ins(class3(1:15),:);test3=ins(class3(16:20),:);
+                        train4=ins(class4(1:15),:);test4=ins(class4(16:20),:);
+                        train5=ins(class5(1:15),:);test5=ins(class5(16:20),:);
+    
+    15,20 参数是啥意思？
+    
+    声音标签需要自己手打？？
+    
