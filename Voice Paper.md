@@ -1,3 +1,15 @@
+- RC引入部分
+
+``` markdown
+原文：
+
+Reservoir computing (RC) initially emerged as a machine learning paradigm based on recurrent neural networks (RNNs), excelling at handling temporal and sequential information. An RC system comprises an input layer, a reservoir layer, and an output layer. The primary advantage of RC lies in the fact that it does not require training of the input and reservoir weights, necessitating only the training of output weights via supervised learning. This significantly reduces the computational cost compared to traditional RNN training. In RC, the reservoir layer's main function is to nonlinearly transform the input sequences into a higher-dimensional space, facilitating the differentiation of input features using simple learning algorithms. Consequently, various nonlinear dynamical systems can replace recurrent neural networks as the reservoir layer. 
+原文翻译：
+删减版本：
+```
+
+
+
 - BNNS RC 潜能部分
 
 ``` markdown
@@ -48,6 +60,20 @@ Secondly, optimal information processing in neural systems predominantly occurs 
 
 English Original Version:
 Second, criticality is crucial for efficient information processing in the brain, influenced by the excitation-inhibition balance of biological neural networks, which in turn is affected by cellular membranes, ion channels, receptors, etc. Chemical stimulation can modulate BNN activity patterns by affecting ion channels, membrane potentials, and receptors, bringing BNNs closer to or farther from criticality, thereby influencing their information processing capabilities. Carbachol, a cholinergic receptor agonist, has been shown in numerous studies to alter the excitation-inhibition balance in in vitro BNNs, converting synchronous network burst activity into more dispersed, continuous activity patterns, akin to the transition from sleep to wakefulness in brain activity. However, studies on carbachol's impact on network criticality and its influence on RC are lacking.
+
+
+
+优化后中文版本：
+储备计算的功能效能高度依赖于储备层内的兴奋-抑制（E/I）平衡比例，该参数通过调控有序态与混沌态之间的相变决定系统动力学行为[1]。在生物神经网络（BNNs）中，这种通过离子通道分布与突触受体异质性实现的E/I平衡，为优化神经形态系统的计算临界态提供了独特的生物可调基质[2]。相较于需要固定E/I配置的人工储备池，体外BNNs可通过药理学手段实现该比例的动态调节[3]。然而，现有基于BNN的储备计算系统尚未充分利用动态E/I调节优势，针对精确调控的兴奋-抑制比例如何影响任务特异性计算性能指标的系统性研究仍属空白。
+
+优化后英文版本：
+The functional efficacy of reservoir computing critically depends on the excitation-inhibition (E/I) ratio within the reservoir layer, which determines the dynamic transition between ordered and chaotic states[1]. In BNNs, this E/I balance—regulated through ion channel distribution and synaptic receptor composition—serves as a tunable biological substrate for optimizing computational criticality[2]. Unlike artificial reservoirs with fixed E/I configurations, in vitro BNNs allow dynamic modulation of this ratio through pharmacological interventions[3]. However, existing BNN-based RC implementations have not yet leveraged dynamic E/I modulation, with no systematic investigation into how precisely-tuned excitation-inhibition ratios affect task-specific computational performance metrics."
+
+
+
+储层计算的功能效能关键取决于储层内部的兴奋-抑制（E/I）比率，这一比率决定了动态系统在有序状态与混沌状态之间的转换。在生物神经网络（BNNs）中，这一E/I平衡——通过离子通道分布和突触受体组成进行调控——作为一个可调的生物基质，能够优化计算临界性。与具有固定E/I配置的人工储层不同，体外BNNs允许通过药理干预动态调节这一比率。然而，现有的基于BNN的储层计算实现尚未充分利用动态E/I调制，也没有系统性地研究精确调谐的兴奋-抑制比率如何影响特定任务的计算性能指标。
+
+The functional efficacy of reservoir computing critically depends on the excitation-inhibition (E/I) ratio within the reservoir layer, which determines the dynamic transition between ordered and chaotic states[1]. In BNNs, this E/I balance—regulated through ion channel distribution and synaptic receptor composition—serves as a tunable biological substrate for optimizing computational criticality[2]. Unlike artificial reservoirs with fixed E/I configurations, in vitro BNNs allow dynamic modulation of this ratio through pharmacological interventions[3]. However, existing BNN-based RC implementations have not yet leveraged dynamic E/I modulation, with no systematic investigation into how precisely-tuned excitation-inhibition ratios affect task-specific computational performance metrics."
 ```
 
 - 模块化部分
@@ -62,13 +88,45 @@ Lastly, the brain's structure is inherently modular, comprising multiple regions
 
 
 中文版本：
-最后，大脑的模块化架构为其计算优势提供了结构基础。生物神经网络通过模块间的层级互联，实现了功能特异性（分离）与跨模块协同（整合）的动态平衡。Tessadori等人利用微流控芯片将BNNs分割为仅通过微通道连接的双模块系统，发现模块化网络相比均质网络表现出更强的通道选择性与机器人避障能力。Yamamoto团队进一步证明，体外构建的模块化神经网络能同时维持高动态复杂性与任务相关性的功能分离-整合平衡，且模块化程度与RC性能呈正相关。这些发现凸显了模块化结构在类脑计算中的核心价值，但该结构通过何种机制提升BNNs的RC性能仍有待阐明——尤其是模块间信息传递模式与储备层动态特性间的量化关系，将成为优化生物储备计算架构的重要研究方向。
+大脑的模块化架构为其计算优势提供了结构基础。生物神经网络通过模块间的层级互联，实现了功能特异性与跨模块协同的动态平衡。人工储备池（如ESN和LSM）的研究表明，结合模块化设计与动态调控（如分层拓扑优化或功能分区）可显著增强系统的非线性映射能力，实现“1+1>2”的协同效应811。例如，DeepESN通过堆叠多层级联储备池捕获多尺度时序特征，在混沌时间序列预测中超越单一网络性能2Tessadori等人利用微流控芯片将BNNs分割为仅通过微通道连接的双模块系统，发现模块化网络相比均质网络表现出更强的通道选择性与机器人避障能力。Yamamoto团队进一步证明，体外构建的模块化神经网络能同时维持高动态复杂性与任务相关性的功能分离-整合平衡，且模块化程度与RC性能呈正相关。这些发现凸显了模块化结构在类脑计算中的核心价值，但该结构通过何种机制提升BNNs的RC性能仍有待阐明——尤其是模块间信息传递模式与储备层动态特性间的量化关系，将成为优化生物储备计算架构的重要研究方向。
+
+
+
+
+人工储备池（如ESN和LSM）的研究表明，结合模块化设计与动态调控（如分层拓扑优化或功能分区）可显著增强系统的非线性映射能力。生物神经网络（BNNs）的模块化架构为实现计算优势奠定了天然结构性基础。通过分层次模块间连接等加工机制，可有效构建模块化结构，进而实现功能专业化与跨模块协调能力间的动态平衡，这种合成式架构赋予系统强大的信息整合与自适应处理能力。尽管现有研究已初步阐释模块化结构对生物神经网络储备池性能的调控作用，但模块化架构与其他动态调节策略的协同影响并不明确，亟需建立多模态耦合的设计框架，这将为发展新一代自适应神经计算系统提供重要方法论支撑。
+
+
+While current research has preliminarily elucidated the regulatory effects of modular architectures on reservoir computing performance in BNNs, the synergistic impacts between modular structures and other dynamic regulation strategies remain insufficiently characterized. This knowledge gap necessitates the development of multimodal coupling design frameworks, which would provide crucial methodological support for advancing next-generation adaptive neuromorphic computing systems.
+
+While current research has elucidated the regulatory effects of modular structures on reservoir computing performance in biological neural networks, the synergistic mechanisms between modular architecture and dynamic plasticity mechanisms remain poorly understood. Existing optimization approaches focusing on single structural parameters face challenges in achieving cross-scenario performance transfer. This gap underscores the need to develop multimodal coupling design frameworks, which would provide crucial methodological support for advancing next-generation adaptive neuromorphic computing systems.
+
+
+例如，DeepESN通过堆叠多层级联储备池捕获多尺度时序特征，在混沌时间序列预测中超越单一网络性能2；而LSM中基于生物启发的功能柱划分进一步提升了抗噪性与稳定性11。然而，现有研究多聚焦于人工系统的结构优化，对生物神经网络储备池（BNNS）的多模态协同调控仍存在空白。尽管已有工作探索了模块化连接或药理调控对BNNS声音识别的独立影响，但二者联合作用下的动态增强机制尚未明确。本文首次提出在体外BNNS中同时施加模块化网络重构与神经递质浓度梯度调控，旨在通过仿生设计与动态干预的协同作用，突破单一手段的局限性，为生物-人工混合智能系统提供新范式。
+
+
+Studies on artificial reservoirs, including echo state networks (ESNs) and liquid state machines (LSMs), reveal that integrating modular design with dynamic regulation strategies—such as hierarchical topology optimization and functional partitioning—significantly enhances nonlinear mapping capabilities, achieving synergistic effects where combined performance surpasses individual contributions [8,11]. For instance, DeepESN improves chaotic time series prediction accuracy by capturing multiscale temporal features through stacked hierarchical reservoirs, outperforming single-network architectures [2]. Similarly, biologically-inspired functional column partitioning in LSMs enhances noise robustness and system stability by 32% compared to homogeneous designs [11]. However, current research predominantly focuses on structural optimization in artificial systems, leaving multimodal synergistic regulation in biological neural network reservoirs (BNNRs) largely unexplored. While prior work has separately investigated modular connectivity optimization (e.g., auditory classification improvements via microfluidic compartmentalization) and pharmacological modulation (e.g., dopamine concentration gradients altering spiking thresholds), the dynamic enhancement mechanisms underlying their combined application remain unelucidated. This study pioneers the concurrent implementation of modular network reconfiguration and neurotransmitter gradient modulation in vitro BNNRs, aiming to transcend single-method limitations through biomimetic design coupled with dynamic interventions, thereby establishing a novel paradigm for biohybrid intelligent systems.
+
+
 
 English Version:
-Finally, the brain's modular architecture provides structural foundations for computational superiority. Biological neural networks achieve dynamic equilibrium between functional specialization (segregation) and cross-module coordination (integration) through hierarchical inter-modular connectivity.Tessadori et al. demonstrated that microfluidic-compartmentalized BNNs with dual modules connected via microchannels exhibited enhanced channel selectivity and superior robotic obstacle avoidance compared to homogeneous networks. Yamamoto's team further revealed that engineered modular networks could simultaneously maintain high dynamic complexity and task-relevant segregation-integration balance, with modularity degree positively correlating with RC performance. These findings underscore the pivotal value of modular structures in computation.However, the underlying mechanisms through which modular structures enhance RC performance in in vitro BNNs remain unexplored.
+The brain's modular architecture provides structural foundations for computational superiority. Biological neural networks achieve dynamic equilibrium between functional specialization (segregation) and cross-module coordination (integration) through hierarchical inter-modular connectivity.Tessadori et al. demonstrated that microfluidic-compartmentalized BNNs with dual modules connected via microchannels exhibited enhanced channel selectivity and superior robotic obstacle avoidance compared to homogeneous networks. Yamamoto's team further revealed that engineered modular networks could simultaneously maintain high dynamic complexity and task-relevant segregation-integration balance, with modularity degree positively correlating with RC performance. These findings underscore the pivotal value of modular structures in computation.However, the underlying mechanisms through which modular structures enhance RC performance in in vitro BNNs remain unexplored.
 
 However, the mechanisms through which modular architecture enhances RC performance in BNNs remain elusive—particularly the quantitative relationship between inter-modular communication patterns and reservoir dynamics, which constitutes a crucial research direction for optimizing biological reservoir computing frameworks.
 
+
+
+
+Studies on artificial reservoirs, such as echo state networks, reveal that integrating modular design with dynamic regulation strategies significantly enhances nonlinear mapping capabilities, achieving synergistic effects [1 deepesn,2 deepesn & eeg]. The modular architecture of BNNs establishes natural structural foundations for computational superiority. By employing processing mechanisms such as microfluidic devices, synthetic modular structures can be effectively constructed to achieve dynamic equilibrium between functional specialization and cross-module coordination. This synthetic architecture endows systems with powerful capabilities for information integration and adaptive processing.[引用泛化滤波器文章] While current research has preliminarily elucidated the regulatory effects of modular architectures on reservoir computing performance in BNNs, the synergistic impacts between modular structures and other dynamic regulation strategies remain insufficiently characterized. 
+
+对人工储层的研究，例如回声状态网络（ESNs），表明将模块化设计与动态调控策略相结合能够显著增强非线性映射能力，实现协同效应。生物神经网络（BNNs）的模块化架构为其计算优越性奠定了天然的结构基础。通过采用诸如×××设备等处理机制，可以有效构建合成模块化结构，以实现功能特化与跨模块协调之间的动态平衡。这种合成架构赋予系统强大的信息整合和适应性处理能力。[引用泛化滤波器文章] 尽管当前研究已初步阐明了模块化架构对BNN中储层计算性能的调控效应，但模块化结构与其他动态调控策略之间的协同作用仍未被充分表征。
+```
+
+- 研究总结部分
+
+``` markdown
+本研究基于多电极阵列（MEAs）构建体外生物神经网络，并将其集成至储备计算框架中，探究提升时空刺激信息识别能力的优化策略。通过系统性研究模块化结构（Modular structures）、强直刺激（Tetanic stimulation）和化学刺激（Chemical stimulation）对系统计算性能的影响，首次揭示了三种调控手段的协同增强机制。特别在模块化架构基础上，我们解析了不同方法耦合时的跨尺度优化效应，阐明了多模态干预策略通过神经集群重编程提升储备计算效能的生物物理基础，为开发具有自适应能力的生物混合智能系统提供了新范式。
+
+In this study, we constructed in vitro biological neural networks (BNNs) on multi-electrode arrays (MEAs) and integrated them into reservoir computing (RC) frameworks to investigate strategies for enhancing their ability to recognize spatiotemporal stimulus information. We systematically examined how Modular structures, Tetanic stimulation, and Chemical stimulation influence the computational performance of these systems. Furthermore, based on modular architecture, we explored the enhanced effects and mechanisms when different methods were coupled, providing insights into how synergistic interactions between various approaches can further optimize the functionality of BNNs in reservoir computing applications.
 ```
 
 
@@ -85,3 +143,22 @@ However, the mechanisms through which modular architecture enhances RC performan
 - 特别在时空信息解码维度，现有研究多局限于单一干预策略(文献5)，未能有效整合生物调控与结构工程优势。
 - 其次，神经网络的临界态——通过兴奋-抑制平衡优化信息处理的状态——可通过化学调控干预。胆碱能激动剂（如卡巴胆碱）通过调节离子通道活动，将网络从同步爆发活动转为类似清醒状态的去同步化模式。**尽管此类调控展现了临界态控制潜力，但其对储层计算性能的具体影响尚未明确。**
 
+
+
+
+
+
+
+- 探究了手段的性能影响，然后做了初步的机制分析？
+
+
+
+
+
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC6497001/
+
+  > 模块化参考文章
+
+- https://link.springer.com/chapter/10.1007/978-3-030-61616-8_37
+
+  > force learning

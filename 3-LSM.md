@@ -323,4 +323,21 @@ nest.SetStatus(nodes, [{'I_e': 14.5} for _ in nodes])
 
   
 
-  这个电流的作用是什么？
+- 这个电流的作用是什么？
+
+
+
+
+
+
+
+# 资源
+
+- https://developer.aliyun.com/article/1579867
+
+  > 储层计算相关的文章 2020 - 2024
+
+- https://blog.csdn.net/tMb8Z9Vdm66wH68VX1/article/details/137446002
+
+  > 临界性清华综述
+

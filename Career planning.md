@@ -278,7 +278,7 @@
    >
    > ---
    >
-   > 先结合当下的大语言模型，如果理想，这一阶段一个月希望你更会使用AI
+   > **先结合当下的大语言模型，如果理想，这一阶段一个月希望你更会使用AI**
 
 2. transformer ？
 
@@ -317,8 +317,26 @@
 - [3Blue1Brown的个人空间-3Blue1Brown个人主页-哔哩哔哩视频](https://space.bilibili.com/88461692)
 
   > 三蓝一棕 - GPT入门
+  
+- [神经科学的核心方程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1ycDaYFEvN?spm_id_from=333.788.recommend_more_video.1&vd_source=9e1609be170d5fd0e2bc8ef7dd60db01)
+
+  > 无意撇到，能否用作激活函数？
+
+- [deepseek红利，普通人如何收割_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1hcNgeDE2A?spm_id_from=333.788.videopod.episodes&vd_source=9e1609be170d5fd0e2bc8ef7dd60db01&p=4)
 
 
+
+
+
+[10_机器学习项目的工作流程.zh_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yC4y127uj?spm_id_from=333.788.videopod.sections&vd_source=9e1609be170d5fd0e2bc8ef7dd60db01&p=11)
+
+> 课程将教您理解AI能做什么、不能做什么
+>
+> 建立对AI现实认知，强调AI将深刻影响社会
+
+[1.课程简介 — 提示工程笔记](https://islinxu.github.io/prompt-engineering-note/Introduction/index.html)
+
+> openAI 笔记
 
 ![image-20250208231736514](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208231736514.png)
 
@@ -353,180 +371,18 @@ Ai 是如何催化蛋白质结构预测的？？？如何加速的？
 
 
 - 在无人驾驶领域，传统深度学习网络架构注意力机制不稳定，液体神经网络可以很好的解决这个问题？
-
 - 方向对应一个token的语义
-
 - transformer 的目标是逐步调整这些语义（方向），使它不单单编码某一个词，还能融入更丰富的上下文含义
-
 - 换句话说，就是希望最终的嵌入向量包含尽可能多的远超单个词的信息量
 
-  
 
-![image-20250208221545562](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208221545562.png)
 
-> 初始嵌入向量仅包含了单词独立的含义，与上下文并没有关联
+# 候选导师
 
-![image-20250208221655623](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208221655623.png)
+[陈国璋-北京大学计算机学院](https://cs.pku.edu.cn/info/1062/2902.htm)
 
-![image-20250208221704403](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208221704403.png)
 
-![image-20250208221848049](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208221848049.png)
 
-![image-20250208221855795](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208221855795.png)
-
-
-
-
-
-我自己的上下文长度很短，缺乏上下文语境的时候，会产生记忆丢失与混淆的情况
-
-
-
-![image-20250208223319835](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208223319835.png)
-
-
-
-![image-20250208223414671](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208223414671.png)
-
-
-
-![image-20250208223423625](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208223423625.png)
-
-
-
-> 查询向量
->
-> 查询矩阵怎么来的？
->
-> 提出问题
-
-
-
-![ ](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208223605887.png)
-
-![image-20250208223616076](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208223616076.png)
-
-
-
-> 键
->
-> 回答问题
-
-![image-20250208223026210](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208223026210.png)
-
-![image-20250208223033410](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208223033410.png)
-
-
-
-
-
-- 对其的概念？点积为正
-
-  > 键与查询对其概念，对齐程度越大，说明
-
-![image-20250208223944562](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208223944562.png)
-
-
-
-![image-20250208224031501](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208224031501.png)
-
-
-
-之前要归一化
-
-![image-20250208224126840](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208224126840.png)
-
-![image-20250208224138704](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208224138704.png)
-
-![image-20250208224143790](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208224143790.png)
-
-![image-20250208224202166](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208224202166.png)
-
-![image-20250208224518069](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208224518069.png)
-
-![image-20250208224528594](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208224528594.png)
-
-![image-20250208224533919](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208224533919.png) 
-
-
-
-
-
-> 基于注意力模式，更新嵌入向量的位置
-
- ![image-20250208225224039](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208225224039.png)
-
-![image-20250208225257189](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208225257189.png)
-
-![image-20250208225325389](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208225325389.png)
-
-![image-20250208225331823](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208225331823.png)
-
-![image-20250208225404439](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208225404439.png)
-
-![image-20250208225522163](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208225522163.png)
-
-![image-20250208225622879](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208225622879.png)
-
-![image-20250208225652354](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208225652354.png)
-
-![image-20250208225708991](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208225708991.png)
-
-
-
-
-
-> 值矩阵的表征
-
-![image-20250208230014494](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208230014494.png)
-
-
-
-多头注意力机制
-
-> 多种语义更新方式，从多个角度考虑上下文之间的关系，最终选取综合考量结果（△加和）
-
-![image-20250208230545622](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208230545622.png)
-
-![image-20250208230930101](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208230930101.png)
-
-![image-20250208231028537](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208231028537.png)
-
-![image-20250208231033426](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208231033426.png)
-
-
-
-
-
-多层感知机模块
-
-![image-20250208231312940](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250208231312940.png)
-
-
-
-
-
-attention 的牛逼之处在于它的可并行性
-
-
-
-
-
-![image-20250209214710894](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250209214710894.png)
-
-![image-20250209215032968](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250209215032968.png)
-
-![image-20250209215738983](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250209215738983.png)
-
-![image-20250209220723931](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250209220723931.png)
-
-- 待生成的词需要有语境，通过多层感知机赋予
-
-![image-20250209220945808](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250209220945808.png)
-
-![image-20250209221229419](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250209221229419.png)
-
-![image-20250209221248797](C:\Users\Yundid\AppData\Roaming\Typora\typora-user-images\image-20250209221248797.png)
 
 # 2025/2/10
 
